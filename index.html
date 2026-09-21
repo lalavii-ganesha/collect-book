@@ -39,31 +39,33 @@
             border-bottom: 2px solid var(--border-color);
         }
 
-        /* 방문자 카운터 스타일 */
+        /* 방문자 카운터 스타일 (축소 및 영문 패치) */
         .visitor-counter {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             background: #222;
-            padding: 8px 14px;
-            border-radius: 8px;
+            padding: 6px 12px;
+            border-radius: 6px;
             border: 1px solid var(--border-color);
-            font-size: 0.85rem;
+            font-size: 0.75rem;
         }
 
         .visitor-item {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
         }
 
         .visitor-label {
             color: var(--text-dim);
+            font-size: 0.75rem;
         }
 
         .visitor-value {
             color: var(--accent-color);
             font-weight: bold;
+            font-size: 0.8rem;
         }
 
         .save-status-panel {
@@ -355,15 +357,15 @@
             <h1 style="margin: 0;">🎮 도감 수집 시뮬레이터</h1>
             <span style="font-size: 0.85rem; color: var(--text-dim);">도감 세트를 완성해야만 스탯 보상이 적용됩니다.</span>
         </div>
-        <!-- 우측 상단 방문자 카운터 -->
+        <!-- 우측 상단 방문자 카운터 (영문 표기 및 컴팩트 사이즈) -->
         <div class="visitor-counter">
             <div class="visitor-item">
-                <span class="visitor-label">오늘 방문</span>
+                <span class="visitor-label">Today's Visits:</span>
                 <span class="visitor-value" id="todayVisitCount">0</span>
             </div>
             <span style="color: #444;">|</span>
             <div class="visitor-item">
-                <span class="visitor-label">총 방문</span>
+                <span class="visitor-label">Total Visits:</span>
                 <span class="visitor-value" id="totalVisitCount">0</span>
             </div>
         </div>
