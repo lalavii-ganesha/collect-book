@@ -1,0 +1,25 @@
+[
+  {
+    "id": "group_1",
+    "category": "장비",
+    "subType": "장비",
+    "title": "쿠이에게 물어보세요",
+    "rewardStat": { "명중": 10, "PVE 데미지%": 5 },
+    "items": [
+      { "id": "item_101", "name": "녹슨 검", "image": "", "enhance": 0 },
+      { "id": "item_102", "name": "가죽 갑옷", "image": "", "enhance": 3 },
+      { "id": "item_103", "name": "나무 방패", "image": "", "enhance": 1 }
+    ]
+  },
+  {
+    "id": "group_2",
+    "category": "재료",
+    "subType": "재료",
+    "title": "기초 채집 재료 도감",
+    "rewardStat": { "체력": 100, "경험치 %": 3 },
+    "items": [
+      { "id": "item_201", "name": "약초", "image": "", "count": 10 },
+      { "id": "item_202", "name": "단단한 돌", "image": "", "count": 5 }
+    ]
+  }
+]
