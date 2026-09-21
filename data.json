@@ -313,5 +313,80 @@
         "count": 4
       }
     ]
+  },
+  {
+    "id": "group_1789979798427",
+    "category": "재료",
+    "subType": "재료",
+    "title": "먹을 순 없잖아요",
+    "rewardStat": {
+      "체력": 0.5
+    },
+    "items": [
+      {
+        "id": "item_1789979798427_0",
+        "name": "질긴가죽",
+        "image": "",
+        "count": 6
+      },
+      {
+        "id": "item_1789979798427_1",
+        "name": "멧돼지바베큐",
+        "image": "",
+        "count": 6
+      },
+      {
+        "id": "item_1789979798427_2",
+        "name": "멧돼지고기",
+        "image": "",
+        "count": 10
+      }
+    ]
+  },
+  {
+    "id": "group_1789979855329",
+    "category": "재료+장비",
+    "subType": "재료+장비",
+    "title": "옷을 훔친 멧돼지",
+    "rewardStat": {
+      "체력": 0.5
+    },
+    "items": [
+      {
+        "id": "item_1789979855329_0",
+        "name": "오래된깃털",
+        "image": "",
+        "count": 8
+      },
+      {
+        "id": "item_1789979855329_1",
+        "name": "숙련마법사옷",
+        "image": "",
+        "enhance": 0
+      }
+    ]
+  },
+  {
+    "id": "group_1789979885127",
+    "category": "장비",
+    "subType": "장비",
+    "title": "무뎌진 날을 날카롭게!",
+    "rewardStat": {
+      "체력": 0.5
+    },
+    "items": [
+      {
+        "id": "item_1789979885127_0",
+        "name": "무딘 너클",
+        "image": "",
+        "enhance": 0
+      },
+      {
+        "id": "item_1789979885127_1",
+        "name": "목 호신부",
+        "image": "",
+        "enhance": 0
+      }
+    ]
   }
 ]
