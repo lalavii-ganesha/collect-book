@@ -39,6 +39,33 @@
             border-bottom: 2px solid var(--border-color);
         }
 
+        /* 방문자 카운터 스타일 */
+        .visitor-counter {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #222;
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-size: 0.85rem;
+        }
+
+        .visitor-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .visitor-label {
+            color: var(--text-dim);
+        }
+
+        .visitor-value {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
         .save-status-panel {
             grid-column: 1 / -1;
             background: #222;
@@ -328,6 +355,18 @@
             <h1 style="margin: 0;">🎮 도감 수집 시뮬레이터</h1>
             <span style="font-size: 0.85rem; color: var(--text-dim);">도감 세트를 완성해야만 스탯 보상이 적용됩니다.</span>
         </div>
+        <!-- 우측 상단 방문자 카운터 -->
+        <div class="visitor-counter">
+            <div class="visitor-item">
+                <span class="visitor-label">오늘 방문</span>
+                <span class="visitor-value" id="todayVisitCount">0</span>
+            </div>
+            <span style="color: #444;">|</span>
+            <div class="visitor-item">
+                <span class="visitor-label">총 방문</span>
+                <span class="visitor-value" id="totalVisitCount">0</span>
+            </div>
+        </div>
     </header>
 
     <!-- [자체 자동 저장 상태 및 수동 저장 패널] -->
@@ -417,6 +456,40 @@
 <div id="toastNotification" class="toast-notification">💾 저장되었습니다!</div>
 
 <script>
+    /* ===================================================
+       [방문자 카운트 로직]
+    =================================================== */
+    function initVisitorCounter() {
+        const todayStr = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+        const lastVisitDate = localStorage.getItem("visit_last_date");
+
+        let totalVisits = parseInt(localStorage.getItem("visit_total_count") || "0", 10);
+        let todayVisits = parseInt(localStorage.getItem("visit_today_count") || "0", 10);
+
+        // 날짜가 변경된 경우 오늘 방문자 카운트 0으로 초기화
+        if (lastVisitDate !== todayStr) {
+            todayVisits = 0;
+            localStorage.setItem("visit_last_date", todayStr);
+        }
+
+        // 브라우저 세션당 1회 카운팅 (페이지 새로고침 시 중복 누적 방지)
+        if (!sessionStorage.getItem("visited_in_session")) {
+            sessionStorage.setItem("visited_in_session", "true");
+            todayVisits += 1;
+            totalVisits += 1;
+
+            localStorage.setItem("visit_today_count", todayVisits.toString());
+            localStorage.setItem("visit_total_count", totalVisits.toString());
+        }
+
+        // UI에 카운트 표출
+        const todayEl = document.getElementById("todayVisitCount");
+        const totalEl = document.getElementById("totalVisitCount");
+
+        if (todayEl) todayEl.innerText = todayVisits.toLocaleString();
+        if (totalEl) totalEl.innerText = totalVisits.toLocaleString();
+    }
+
     /* ===================================================
        [도감 수집 시뮬레이터 메인 로직]
     =================================================== */
@@ -687,8 +760,9 @@
         updateSectionUI(petStats, "progressTextPet", "progressBarPet", "statListPet");
     }
 
-    // 앱 실행 시 외부 JSON 데이터 로드
+    // 앱 실행 시 외부 JSON 데이터 로드 및 방문자 카운터 시작
     loadSavedData();
+    initVisitorCounter();
 </script>
 
 </body>
