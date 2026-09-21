@@ -1,25 +1,117 @@
 [
   {
-    "id": "group_1",
-    "category": "장비",
-    "subType": "장비",
+    "id": "group_1789964931212",
+    "category": "재료",
+    "subType": "재료",
     "title": "쿠이에게 물어보세요",
-    "rewardStat": { "명중": 10, "PVE 데미지%": 5 },
+    "rewardStat": {
+      "체력": 0.5
+    },
     "items": [
-      { "id": "item_101", "name": "녹슨 검", "image": "", "enhance": 0 },
-      { "id": "item_102", "name": "가죽 갑옷", "image": "", "enhance": 3 },
-      { "id": "item_103", "name": "나무 방패", "image": "", "enhance": 1 }
+      {
+        "id": "item_1789964943062_0",
+        "name": "쿠이증표",
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA3CAYAAAC2EuL1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPLSURBVGhD7dpPSBRhGMfxhQo8dvTQwYMHT9JNvIWHDlIIRuAhD2JSS+AtojwlHjuUSKIsCEUYxoqEY1HowSAEc7GMNTDXQGtDIcECj2/v79193n3m9ZldXdeMcQY+sMyOu8+X+ZsZ+/pzW4XNKrOw/E2FMpL7EEWGRBQZFv9t5PSddisVbzWk7faj4pE0UDHJ22178M9AmBp/UDCVMPCzfLv9iiIJDfcx3uLjvg80kLHyXjbWZ1TFYj6NeT0N9f82MtXeptTMgJEdH7ZSXd2Wmnnm9+ldjhSo8bDkvZtWZ6zKGLzUYs2PDtrIZE0UGajsSK+uyb62UcRdAiIRpl7qAPI7YyCMIBRxRJqxlANHIo4C1ZYeGqQwLE4ciSKPI9I732hCDX3+Ic4XCO5Ch60QaPAwLh/JIZTOSTovDxobRUKyplnNtXYa6Xiz2ll8vYdv8QUhVNCvByZ8+9X5HLVd0N+nss9HLK+u1ZBmDVIyEhAKUiD4BvURAg1pW40iJ0f91vV7eeXERpEkKNIeUtLAhhQI0rYaRbqOOhJxdAtxI4k4sCEFgrStxvdeQKQbO1FTeIYOEkUCLtdqXF8FwX1GtTyZGAh6UEmH/i7wRvzr11N7ZJ8+Mt42lT5kDxUZ008tQE8wUJFId32RyIT+TiLND1EkBEVSICR771plR9Jh6h6qIMR51dXGkUeO9XYbvjBODAQWQHtPiiMs0rW7tFsyNIoEE5l/zvwzNWJluvR6aaAgr3QEocOy2CHK7MzpW1We2tUPH5zKqszEsJE4XeFIaZiiKBC/7KK9J20niCKPJRKLtJ4iQXq/CApMd+jnZxYMFHioSEAo8EjODMMXZ8iysH8obzy8byDSNX3lsokLCoQoErxzrSqb0A/DMJIQqUl9W9HnhoHXq3pIbWdxWpR944nUE/1Zgu3HfcbSjTbL3jZOnbGk+SEwEnGglvXAln7iCIrkikTiVyipeI/h1TZZxSLFOBYpzc9FkW4kD0tduxUcmefGgb7ua7j059ChilD+H0ccD5RmLSWKBHvRyV94EAdebWMhsr+vQIhEHL0OigQpEOjQlObcj8BIum0A/0Jp/W7/gGhjaNiYu3hVqbUMk95jY2hATV9oMFLt+nPzDhNHTnYkx8Mk6etdlhTJuZGII3RYctI8B7WvyFK8+gaLB0uROYUwkoydrWgYF0WWYyBWZWFwwDkZFEnbgPR5lVDxyCC0l9zzWdq20qLIsAh1ZOj/chlxmWxOKn0CIuc/r4U7cvXHLzW7sBKeSNpzxqa2ta2+fN9ULyZn1V84NcvUH0SHBwAAAABJRU5ErkJggg==",
+        "count": 1
+      }
     ]
   },
   {
-    "id": "group_2",
+    "id": "group_1789965620522",
     "category": "재료",
     "subType": "재료",
-    "title": "기초 채집 재료 도감",
-    "rewardStat": { "체력": 100, "경험치 %": 3 },
+    "title": "널 만난 건 행운이야",
+    "rewardStat": {
+      "체력": 0.5
+    },
     "items": [
-      { "id": "item_201", "name": "약초", "image": "", "count": 10 },
-      { "id": "item_202", "name": "단단한 돌", "image": "", "count": 5 }
+      {
+        "id": "item_1789965620522_0",
+        "name": "클로버",
+        "image": "",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "group_1789965667722",
+    "category": "재료+장비",
+    "subType": "재료+장비",
+    "title": "무명 시절을 고쳐서",
+    "rewardStat": {
+      "체력": 0.5
+    },
+    "items": [
+      {
+        "id": "item_1789965667722_0",
+        "name": "클로버",
+        "image": "",
+        "count": 4
+      },
+      {
+        "id": "item_1789965667722_1",
+        "name": "무명옷",
+        "image": "",
+        "enhance": 0
+      }
+    ]
+  },
+  {
+    "id": "group_1789965921407",
+    "category": "코스튬",
+    "subType": "코스튬",
+    "title": "왕국의 평화를 위하여!",
+    "rewardStat": {
+      "체력": 0.5
+    },
+    "items": [
+      {
+        "id": "item_1789966132305_0",
+        "name": "왕국의평화",
+        "image": ""
+      }
+    ]
+  },
+  {
+    "id": "group_1789966162912",
+    "category": "코스튬",
+    "subType": "코스튬",
+    "title": "왕국 기사단 한 걸음",
+    "rewardStat": {
+      "체력": 0.5
+    },
+    "items": [
+      {
+        "id": "item_1789966162912_0",
+        "name": "왕국기사단원복",
+        "image": ""
+      }
+    ]
+  },
+  {
+    "id": "group_1789966246125",
+    "category": "재료+장비",
+    "subType": "재료+장비",
+    "title": "식물인가? 동물인가?",
+    "rewardStat": {
+      "체력": 0.5
+    },
+    "items": [
+      {
+        "id": "item_1789966246125_0",
+        "name": "동그류",
+        "image": "",
+        "count": 5
+      },
+      {
+        "id": "item_1789966246125_1",
+        "name": "무명옷",
+        "image": "",
+        "enhance": 0
+      }
     ]
   }
-]
+][cite: 5]
+```[cite: 5]
+
+제공해주신 데이터 원본을 바탕으로 6개의 그룹 항목이 포함된 `data.json` 포맷으로 정리해 드렸습니다[cite: 5]. 이 내용을 복사하여 저장해 사용하시면 됩니다!
