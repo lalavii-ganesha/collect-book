@@ -39,7 +39,7 @@
             border-bottom: 2px solid var(--border-color);
         }
 
-        /* 방문자 카운터 스타일 (축소 및 영문 패치) */
+        /* 방문자 카운터 스타일 (축소 및 영문 표기) */
         .visitor-counter {
             display: flex;
             align-items: center;
@@ -459,7 +459,7 @@
 
 <script>
     /* ===================================================
-       [방문자 카운트 로직]
+       [방문자 카운트 로직 - 수정 완료]
     =================================================== */
     function initVisitorCounter() {
         const todayStr = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
@@ -468,13 +468,15 @@
         let totalVisits = parseInt(localStorage.getItem("visit_total_count") || "0", 10);
         let todayVisits = parseInt(localStorage.getItem("visit_today_count") || "0", 10);
 
-        // 날짜가 변경된 경우 오늘 방문자 카운트 0으로 초기화
+        // 1. 날짜가 변했을 경우 (새로운 날의 방문)
         if (lastVisitDate !== todayStr) {
-            todayVisits = 0;
+            todayVisits = 0; // 오늘 카운트 0으로 초기화
             localStorage.setItem("visit_last_date", todayStr);
+            // 날짜 변경 시 세션 초기화를 진행하여 새 날의 카운팅이 누적되도록 수정
+            sessionStorage.removeItem("visited_in_session");
         }
 
-        // 브라우저 세션당 1회 카운팅 (페이지 새로고침 시 중복 누적 방지)
+        // 2. 새 세션 접속 시 Today와 Total을 동시에 +1 증가
         if (!sessionStorage.getItem("visited_in_session")) {
             sessionStorage.setItem("visited_in_session", "true");
             todayVisits += 1;
@@ -484,7 +486,7 @@
             localStorage.setItem("visit_total_count", totalVisits.toString());
         }
 
-        // UI에 카운트 표출
+        // 3. UI 표출
         const todayEl = document.getElementById("todayVisitCount");
         const totalEl = document.getElementById("totalVisitCount");
 
@@ -762,7 +764,7 @@
         updateSectionUI(petStats, "progressTextPet", "progressBarPet", "statListPet");
     }
 
-    // 앱 실행 시 외부 JSON 데이터 로드 및 방문자 카운터 시작
+    // 앱 실행 시 외부 JSON 데이터 로드 및 방문자 카운터 실행
     loadSavedData();
     initVisitorCounter();
 </script>
